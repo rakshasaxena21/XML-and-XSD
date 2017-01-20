@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Electricity Consumer Information</TITLE>
+			<link href="cascade.css" rel="stylesheet" type="text/css"></link>
+			<script src="cascade.js">
+			
+			</script>
+	</HEAD>
+	<BODY>
+		<FORM onsubmit="sub();"  name="electricityForm">
+			<TABLE align="center" width="30%">
+				<tr>
+					<th colspan="2">Electricity Consumer Form </BR></BR></th>
+				</tr>
+				
+				<tr>
+					<td>
+						Consumer Number<sup>*</sup> :</BR></BR>
+					</td>
+					<td>
+						<input type="text" name="cnsNum" id="id2"pattern="[0-9]{8}" title="The consumer number should consist 8 digits only" required></BR></BR>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Consumer Name<sup>*</sup> :</BR></BR>
+					</td>
+					<td>
+						<input type="text" name="cnsName" id="id1" pattern="[A-Z][a-z ]{3,}" title="The Consumer name should start with Capital letter and consist of minimum 3 characters" required></BR></BR>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Email Address<sup>*</sup> :</BR></BR>
+					</td>
+					<td>
+						<input type="email" name="cnsEmail" id="id3"title="Please provide proper email id"required></BR></BR>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						Number of Units<sup>*</sup> : </BR></BR>
+					</td>
+					<td>
+						<input type="text" name="cnsUnit" id="id4" pattern="[0-9]+" title="Please enter digits only"required></BR></BR>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" name="formSubmit" value="Calculate Electricity Charge and Display">
+					</td>
+				</tr>
+			</TABLE>
+		</FORM>
+	</BODY>
+</HTML>
+
+
+
