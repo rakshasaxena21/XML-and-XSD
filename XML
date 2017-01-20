@@ -1,0 +1,12 @@
+
+  ------ .XML FILE
+
+  <?xml version="1.0"?>
+<Electricity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="electricity.xsd">
+  <Consumer Consumer_Number="123">
+    <Consumer_Name>Rohan</Consumer_Name>
+  <Number_of_units>100</Number_of_units>
+    <email>rohan@electricty.com</email>
+  </Consumer>
+
+  </Electricity>
