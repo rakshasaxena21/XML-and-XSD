@@ -1,0 +1,21 @@
+body{
+
+
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-attachment:fixed;
+
+}
+div{
+text-align:center;
+color:red;
+}
+table{
+border:1;
+background-color:rgba(0,0,255,0.5);
+box-shadow:5px 5px 5px blue;
+color:white;
+}
+.star{
+color:red;
+}
