@@ -1,0 +1,41 @@
+--2.1
+select		CourseID, CourseName, Location, RoomNo
+from		SCourse_100971 AS cs 
+inner join  Faculty_100971 AS ft
+on			cs.Faculty_ID=ft.Faculty_ID
+where		ft.FacultyName='Richard Jackson'
+
+--2.2
+select		CourseName, CourseID
+from		SCourse_100971
+where		CourseName LIKE '%Windows%'
+order by	CourseName
+
+--2.4
+go
+create procedure usp_coursedetails_100971
+
+(
+	@CourseID varchar(30)
+)
+
+as
+begin
+	if exists (select CourseName 
+			   from SCourse_100971 
+			   where CourseID=@CourseID)
+
+	begin
+			select CourseID, CourseName, Location, RoomNo, Faculty_ID, StartDate, EndDate
+			from   SCourse_100971
+			where  CourseID=@CourseID
+	end
+	else
+	begin
+		RAISERROR('Course ID does not exist',1,1)
+	end
+end
+
+exec usp_coursedetails_100971 [.NET101]
+exec usp_coursedetails_100971 [.NET108]
+with result sets((CID varchar(20), Course varchar(20), Loc varchar(30), Room varchar(30), FID int, Startdte date, Enddte date))
