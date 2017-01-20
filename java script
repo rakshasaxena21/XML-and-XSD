@@ -1,0 +1,28 @@
+function sub()
+			{
+				
+				
+					var charge=document.getElementById("id4");
+					var name=document.getElementById("id1");
+					var number=document.getElementById("id2");
+					var email=document.getElementById("id3");
+					//alert(charge.value); (To check the value)
+					if (charge.value<=100)
+					{
+						var amount=charge.value*2.96;
+						//alert(amount); (To check if the condition is working)
+					}
+					else if(charge.value>100)
+					{
+						var amount=(charge.value-100)*5.56 + (100*2.96);
+						//alert(amount);
+					}
+					alert(amount);
+					alert(name.value);
+					alert(number.value);
+					alert(email.value);
+					
+					
+					
+					
+			}		
